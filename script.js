@@ -21,22 +21,12 @@ const users = [
 ];
 
 function filterDogOwners(arr) {
-  arr.forEach(user => {
-    if (user.hasDog === true) {
-      console.log(user);
-    }
-  })
+  return arr.filter(user => user.hasDog === true);
 }
 
 function filterAdults(arr) {
-  const userArray = [];
-  arr.forEach(user => {
-    if (user.age >= 18) {
-      userArray.push(user);
-    }
-  })
-  console.log(userArray);
+  return arr.filter(user => user.age >= 18);
 }
 
-filterDogOwners(users);
-filterAdults(users);
+console.log(filterDogOwners(users));
+console.log(filterAdults(users));
